@@ -19,11 +19,10 @@ def calculate(x: MatrixRequest):
 
     X = np.array(x.matrix)
 
-    
-    
-    product = M @ B  
-    
-    result = np.add(product, B)  # Adding matrix B
+    # Performing calculations with NumPy method
+    np_result = np.array(M) @ np.array(B) 
+    np_result = np.add(np_result, B)
+  
 
     sigmondToResult = sigmond(result)
     
