@@ -12,11 +12,13 @@ class MatrixRequest(BaseModel):
 @app.post('/calculate')
 def calculate(x: MatrixRequest): 
     
-    M = np.zeros((5, 5))  
-    B = np.ones((5, 5)) 
+    #Pre definning matrices M and B using list comprehension
     
-    
+    M = [[0 for _ in range(5)] for _ in range(5)]
+    B = [[1 for _ in range(5)] for _ in range(5)] 
+
     X = np.array(x.matrix)
+
     
     
     product = M @ B  
