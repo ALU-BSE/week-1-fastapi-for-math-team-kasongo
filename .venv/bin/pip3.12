@@ -1,4 +1,4 @@
-#!/home/rurangwa/week-1-fastapi-for-math-team-kasongo/.venv/bin/python3
+#!/home/pimanzi/week-1-fastapi-for-math-team-kasongo/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
