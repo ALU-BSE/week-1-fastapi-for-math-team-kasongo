@@ -22,6 +22,13 @@ def calculate(x: MatrixRequest):
     # Performing calculations with NumPy method
     np_result = np.array(M) @ np.array(B) 
     np_result = np.add(np_result, B)
+
+    # Manual calculations without NumPy
+    product = [[0 for _ in range(5)] for _ in range(5)] 
+    for i in range(5):
+        for j in range(5):
+            for k in range(5):
+                product[i][j] += M[i][k] * X[k][j]
   
 
     sigmondToResult = sigmond(result)
