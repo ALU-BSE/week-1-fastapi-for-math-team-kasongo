@@ -40,7 +40,8 @@ def calculate(x: MatrixRequest):
     def sigmoid(x):
        return 1 / (1 + np.exp(-x))
 
-    
+    # Apply the sigmoid function to np_result (NumPy result)
+    sigmoid_output = sigmoid(np_result)    
     
     # Return the result as a dictionary (FastAPI automatically converts to JSON)
     return {'with_numpy': sigmondToResult.tolist()}  # Convert NumPy array to list for JSON serialization
