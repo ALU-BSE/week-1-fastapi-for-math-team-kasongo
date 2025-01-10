@@ -49,6 +49,8 @@ def calculate(x: MatrixRequest):
         'without_num_py': manual_result,
         'sigmoid_output': sigmoid_output.tolist() 
     }
+   
+    # Deployed Api : https://week-1-fastapi-for-math-team-kasongo.onrender.com/calculate
 
 
 if __name__ == "__main__":
