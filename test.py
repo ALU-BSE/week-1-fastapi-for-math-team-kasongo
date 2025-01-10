@@ -29,6 +29,12 @@ def calculate(x: MatrixRequest):
         for j in range(5):
             for k in range(5):
                 product[i][j] += M[i][k] * X[k][j]
+
+    manual_result = [[0 for _ in range(5)] for _ in range(5)]
+    for i in range(5):
+        for j in range(5):
+           manual_result[i][j] = product[i][j] + B[i][j]
+
   
 
     sigmondToResult = sigmond(result)
