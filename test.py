@@ -43,8 +43,13 @@ def calculate(x: MatrixRequest):
     # Apply the sigmoid function to np_result (NumPy result)
     sigmoid_output = sigmoid(np_result)    
     
-    # Return the result as a dictionary (FastAPI automatically converts to JSON)
-    return {'with_numpy': sigmondToResult.tolist()}  # Convert NumPy array to list for JSON serialization
+    # Return the results
+    return {
+        'with_num_py': np_result.tolist(), 
+        'without_num_py': manual_result,
+        'sigmoid_output': sigmoid_output.tolist() 
+    }
+
 
 if __name__ == "__main__":
     uvicorn.run(app)
