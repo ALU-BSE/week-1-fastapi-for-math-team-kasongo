@@ -22,8 +22,11 @@ def calculate(x: MatrixRequest):
     product = M @ B  
     
     result = np.add(product, B)  # Adding matrix B
+
+    sigmondToResult = sigmond(result)
     
-    return {'without_num_py': list(result)}  # Convert NumPy array to list 
+    # Return the result as a dictionary (FastAPI automatically converts to JSON)
+    return {'with_numpy': sigmondToResult.tolist()}  # Convert NumPy array to list for JSON serialization
 
 if __name__ == "__main__":
     uvicorn.run(app)
